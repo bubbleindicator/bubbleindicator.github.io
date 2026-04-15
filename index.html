@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coming Soon</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+    }
+    .wrap {
+      text-align: center;
+    }
+    p {
+      transition: color 0.4s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Hello world</h1>
+    <p id="coming-soon">Coming soon</p>
+  </div>
+
+  <script>
+    const el = document.getElementById('coming-soon');
+    const colors = ['#ff5f6d', '#ffc371', '#47cf73', '#5ea0ff', '#c084fc'];
+    let i = 0;
+    setInterval(() => {
+      el.style.color = colors[i];
+      i = (i + 1) % colors.length;
+    }, 700);
+  </script>
+</body>
+</html>
